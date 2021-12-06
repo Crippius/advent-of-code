@@ -105,7 +105,7 @@ def main():
     
     print(f"The numbers of points in which two lines overlap (without diagonals) is: {count1}\n") # 5092
 
-    print(f"The numbers of points in which two lines overlap (with diagonals) is: {count1}") # 20484
+    print(f"The numbers of points in which two lines overlap (with diagonals) is: {count2}") # 20484
 
     input_data.close() 
 
