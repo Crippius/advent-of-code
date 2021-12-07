@@ -24,8 +24,8 @@ def main():
     minimum1 = float("+inf") # Starting with maximum value possible as minimum
     minimum2 = float("+inf")
 
-    for i in range(mean(nums)-1, mean(nums)+1): # Minimum value is around the mean
-        tmp1 = 0 
+    for i in range(mean(nums)-1, mean(nums)+1): # Minimum value is in the range around the mean, as of this paper 
+        tmp1 = 0                       # https://cdn.discordapp.com/attachments/541932275068174359/917782745894256640/crab-submarines.pdf
         tmp2 = 0
         for j in nums: # Calculating the amount of fuel needed to get to align:
             tmp1 += abs(i-j) # using human engineering
