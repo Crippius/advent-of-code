@@ -1,5 +1,5 @@
 
-# https://adventofcode.com/2021/day/1
+# https://adventofcode.com/2021/day/7
 
 # Used for Part 2
 def summarial(value): # Calculating factorial but using + instead of *
