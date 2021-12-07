@@ -1,6 +1,10 @@
 
 # https://adventofcode.com/2021/day/7
 
+def mean(lst):
+    return sum(lst)//len(lst)
+
+
 # Used for Part 2
 def summarial(value): # Calculating factorial but using + instead of *
     count = 0
@@ -20,8 +24,7 @@ def main():
     minimum1 = float("+inf") # Starting with maximum value possible as minimum
     minimum2 = float("+inf")
 
-    for i in range(max(nums)):
-
+    for i in range(mean(nums)-1, mean(nums)+1): # Minimum value is around the mean
         tmp1 = 0 
         tmp2 = 0
         for j in nums: # Calculating the amount of fuel needed to get to align:
@@ -35,8 +38,6 @@ def main():
             minimum1 = tmp1
         if minimum2 > tmp2:
             minimum2 = tmp2
-
-    # Total seconds in loop: about 50 seconds (could be better)
 
     print(f"{minimum1} fuel was used to align using human engineering\n") # 336040
     print(f"{minimum2} fuel was used to align using crab engineering") # 94813675
