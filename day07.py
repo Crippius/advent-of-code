@@ -16,7 +16,7 @@ def summarial(value): # Calculating factorial but using + instead of *
 
 def main():
 
-    input_data = open("day7_input.txt", "r") # Getting data and cleaning it
+    input_data = open("day07_input.txt", "r") # Getting data and cleaning it
     nums = [int(i) for i in input_data.readline().split(",")]
 
     # N.B Part 1 and 2 done in parallel
@@ -41,6 +41,8 @@ def main():
 
     print(f"{minimum1} fuel was used to align using human engineering\n") # 336040
     print(f"{minimum2} fuel was used to align using crab engineering") # 94813675
+
+    input_data.close()
 
 
 

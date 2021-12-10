@@ -82,7 +82,7 @@ def find_lowest_point(table, row, column): # You could check if all the numbers 
 
 def main():
     
-    input_data = open("day9_input.txt", "r") # Getting data
+    input_data = open("day09_input.txt", "r") # Getting data
     
     data = input_data.readlines() # Cleaning data
     heightmap = [] 

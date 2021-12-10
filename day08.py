@@ -132,7 +132,7 @@ def find_configuration(patterns): # Function that given a pattern will return th
 
 def main():
 
-    input_data = open("day8_input.txt", "r") # Getting inputs
+    input_data = open("day08_input.txt", "r") # Getting inputs
     patterns = [] 
     outputs = []
 

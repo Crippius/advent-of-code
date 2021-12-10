@@ -2,7 +2,7 @@
 
 def main():
     
-    input_data = open("day6_input.txt", "r")
+    input_data = open("day06_input.txt", "r")
 
     lanternfish = [int(i) for i in input_data.readline().split(",")] # Inserting in list initial fish
 
