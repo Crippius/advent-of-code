@@ -25,13 +25,9 @@ def main():
     v_y_min = t_y_min # After the first (and only) step they reach the target, any higher velocity wouldn't enter the target
 
     # Finding highest point with greatest vertical velocity (Part 1)
-    y, y_max = 0, 0
-    v_y = v_y_max
-    while v_y != 0: 
-        y += v_y
-        if y > y_max:
-            y_max = y
-        v_y -= 1
+    # Since the vertical velocity gets smaller as time goes on because of gravity, similarly to the drag with the horizontal velocity,
+    # We can find the highest point by summing all integers from 1 to the initial velocity 'n', and it equals to n*(n+1)/2
+    y_max = v_y_max*(v_y_max+1)/2 
 
     print(f"The highest that can be reached while still hitting the target is: {y_max}\n") # 4950   
     
@@ -39,7 +35,7 @@ def main():
     v_x_min = floor((1+sqrt(1+4*t_x_min*2))/2) 
     # For the minimal one this (^) is the solution I discovered, here's the explanation:
     # Because of the drag, the horizontal velocity becomes smaller one step at a time, and I found out while writing
-    # the code (@ row 86) that the final x position is the sum of all numbers between 1 and the initial horizontal velocity 'n'
+    # the code (@ ~ row 82) that the final x position is the sum of all numbers between 1 and the initial horizontal velocity 'n'
     # In my calculus class I found out that this sum can be rewritten as n*(n+1)/2; so to find the minimal velocity to reach
     # the nearest point of the target 'k'we have to solve this equation -> n*(n+1)/2=k -> n**2+n-2k = 0, 
     # after doing the quadratic formula for n (and rounding it down to the integer value) we get our result :) 
@@ -91,7 +87,15 @@ def main():
 #         x += v_x
 #         v_x -= 1
 
-
+# | Code used to find maximum height 
+# v
+# y, y_max = 0, 0
+# v_y = v_y_max
+# while v_y != 0: 
+#     y += v_y
+#     if y > y_max:
+#         y_max = y
+#     v_y -= 1
 
 if __name__ == "__main__":
     main()
