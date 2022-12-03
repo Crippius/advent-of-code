@@ -54,3 +54,5 @@ if __name__ == "__main__":
     
     print(f"The number of points made in the tournament using the second strategy is: {tournament_points(second_matchup)} points")
 
+    fp.close()
+
