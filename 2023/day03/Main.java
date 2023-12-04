@@ -92,18 +92,16 @@ public class Main {
 
         String file_name = "day03/day03_input.txt";
 
-        part2(file_name);
-
-        // try {
-        //     part1(file_name);
-        // } catch (Exception e) {
-        //     System.err.println("Part 1 Failed " + e);
-        // }
-        // try {
-        //     part2(file_name);
-        // } catch (Exception e) {
-        //     System.err.println("Part 2 Failed " + e);
-        // }
+        try {
+            part1(file_name);
+        } catch (Exception e) {
+            System.err.println("Part 1 Failed " + e);
+        }
+        try {
+            part2(file_name);
+        } catch (Exception e) {
+            System.err.println("Part 2 Failed " + e);
+        }
 
     }   
 }
